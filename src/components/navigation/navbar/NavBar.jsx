@@ -32,7 +32,6 @@ function NavBar({ activeSection, onNavigate }) {
           onClick={() => onNavigate("home")}
           className="text-xl font-bold tracking-tight text-white transition hover:text-red-500"
         >
-      
         </a>
 
         {/* Navigation */}
