@@ -1,11 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import FormCard from "./components/base/Cards/FormCard";
 import NavBar from "./components/navigation/navbar/NavBar";
 import ProjectCard from "./components/projects/ProjectCard";
 import projects from "./data/projects";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find((entry) => entry.isIntersecting);
+
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      {
+        root: null,
+        threshold: 0.35,
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const handleNavigation = (section) => {
     setActiveSection(section);
   };
@@ -56,7 +84,10 @@ function App() {
         </section>
 
         {/* About */}
-        <section id="sobre_mi" className="animate-fade-up mx-auto max-w-6xl px-6 py-24">
+        <section
+          id="sobre_mi"
+          className="animate-fade-up mx-auto max-w-6xl px-6 py-24"
+        >
           <div className="mb-10">
             <p className="mb-2 text-sm font-medium uppercase tracking-widest text-red-500">
               Sobre mí
@@ -78,7 +109,10 @@ function App() {
         </section>
 
         {/* Projects */}
-        <section id="proyectos" className="animate-fade-up scroll-mt-24 mx-auto max-w-6xl px-6 py-24">
+        <section
+          id="proyectos"
+          className="animate-fade-up scroll-mt-24 mx-auto max-w-6xl px-6 py-24"
+        >
           <div className="mb-10">
             <p className="mb-2 text-sm font-medium uppercase tracking-widest text-red-500">
               Proyectos
@@ -106,22 +140,16 @@ function App() {
 
         {/* Contact */}
         <section id="contacto" className="mx-auto max-w-6xl px-6 py-24">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center sm:p-12">
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-8 text-center sm:p-12">
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl uppercase tracking-widest text-red-500">
-              Contacto
+              Formulario de Contacto
             </h2>
 
             <p className="mx-auto mb-8 max-w-xl text-gray-400">
               Si quieres conocer más sobre mis proyectos o ponerte en contacto
               conmigo, puedes hacerlo aquí.
             </p>
-
-            <a
-              href="mailto:tuemail@example.com"
-              className="inline-flex rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-500"
-            >
-              Enviar mensaje
-            </a>
+            <FormCard />
           </div>
         </section>
       </main>
