@@ -112,7 +112,7 @@ function FormCard() {
             htmlFor="message"
             className="block text-sm font-medium text-gray-300"
           >
-            Mensaje
+            Mensaje y/o Asunto
           </label>
 
           <textarea
