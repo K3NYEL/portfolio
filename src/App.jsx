@@ -48,7 +48,7 @@ function App() {
         {/* Home */}
         <section
           id="home"
-          className="scroll-mt-24 animate-fade-up flex py-30 items-center justify-center px-6"
+          className="scroll-mt-24 animate-fade-up flex py-40 items-center justify-center px-6"
         >
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">

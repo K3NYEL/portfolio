@@ -1,7 +1,39 @@
+import { useState } from "react";
+
 function FormCard() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    setStatus("Enviando...");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwlpkjkb", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("Mensaje enviado correctamente.");
+        form.reset();
+      } else {
+        setStatus("No se pudo enviar el mensaje.");
+      }
+    } catch (error) {
+      setStatus("Ocurrió un error al enviar el mensaje.");
+    }
+  };
+
   return (
     <div className="w-full max-w-2xl rounded-2xl p-4 sm:p-8 md:p-12">
-      <form className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5">
+
         {/* Nombre */}
         <div>
           <label
@@ -135,6 +167,13 @@ function FormCard() {
         >
           Enviar mensaje
         </button>
+
+        {/* Estado del envío */}
+        {status && (
+          <p className="text-sm text-gray-400">
+            {status}
+          </p>
+        )}
       </form>
     </div>
   );
