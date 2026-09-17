@@ -20,7 +20,7 @@ function App() {
         {/* Home */}
         <section
           id="home"
-          className="scroll-mt-24 flex min-h-screen items-center justify-center px-6"
+          className="scroll-mt-24 animate-fade-up flex py-30 items-center justify-center px-6"
         >
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -56,7 +56,7 @@ function App() {
         </section>
 
         {/* About */}
-        <section id="sobre_mi" className="mx-auto max-w-6xl px-6 py-24">
+        <section id="sobre_mi" className="animate-fade-up mx-auto max-w-6xl px-6 py-24">
           <div className="mb-10">
             <p className="mb-2 text-sm font-medium uppercase tracking-widest text-red-500">
               Sobre mí
@@ -78,7 +78,7 @@ function App() {
         </section>
 
         {/* Projects */}
-        <section id="proyectos" className="mx-auto max-w-6xl px-6 py-24">
+        <section id="proyectos" className="animate-fade-up scroll-mt-24 mx-auto max-w-6xl px-6 py-24">
           <div className="mb-10">
             <p className="mb-2 text-sm font-medium uppercase tracking-widest text-red-500">
               Proyectos

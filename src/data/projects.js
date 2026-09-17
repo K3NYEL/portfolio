@@ -1,5 +1,6 @@
 import { SiPython, SiSqlite } from "react-icons/si";
 import { FaBox, FaFilePdf, FaDesktop } from "react-icons/fa";
+import klpSystemImage from "../assets/klp_system.png";
 
 const projects = [
   {
@@ -8,7 +9,7 @@ const projects = [
     description:
       "Aplicación de escritorio para la gestión y automatización de dispositivos.",
 
-    image: "/klp_system.png",
+    image: klpSystemImage,
 
     technologies: [
       {
@@ -25,12 +26,12 @@ const projects = [
       },
       {
         name: "Tkinter",
-        icon: FaDesktop, 
+        icon: FaDesktop,
       },
       {
         name: "ReportLab",
-        icon: FaFilePdf, 
-      }
+        icon: FaFilePdf,
+      },
     ],
 
     github: "https://github.com/K3NYEL/klp_system",
@@ -54,16 +55,16 @@ const projects = [
       },
       {
         name: "Flask",
-        icon: FaDesktop, 
+        icon: FaDesktop,
       },
       {
         name: "Bootstrap",
-        icon: FaFilePdf, 
-      }
+        icon: FaFilePdf,
+      },
     ],
 
     github: "https://github.com/K3NYEL/klp_system_web",
-  }
+  },
 ];
 
 export default projects;
