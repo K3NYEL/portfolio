@@ -1,7 +1,8 @@
+import { useState } from "react";
+
 import NavBar from "./components/navigation/navbar/NavBar";
 import ProjectCard from "./components/projects/ProjectCard";
 import projects from "./data/projects";
-import { useState } from "react";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -12,17 +13,14 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Navigation */}
-      <NavBar 
-        activeSection = {activeSection}
-        onNavigate={handleNavigation}
-      />
+      <NavBar activeSection={activeSection} onNavigate={handleNavigation} />
 
       {/* Main content */}
       <main>
         {/* Home */}
         <section
           id="home"
-          className="flex min-h-screen items-center justify-center px-6"
+          className="scroll-mt-24 flex min-h-screen items-center justify-center px-6"
         >
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -93,7 +91,15 @@ function App() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+              <div
+                key={project.title}
+                className="animate-fade-up"
+                style={{
+                  animationDelay: `${index * 120}ms`,
+                }}
+              >
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
         </section>
