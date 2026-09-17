@@ -1,13 +1,27 @@
+import { SiPython, SiSqlite } from "react-icons/si";
+
 const projects = [
   {
-    title: "Klp System",
+    title: "KLP SYSTEM",
+
     description:
       "Aplicación de escritorio para la gestión y automatización de dispositivos.",
-    image: "/public/klp_system.png",
-    technologies: ["Python", "CustomTkinter", "SQLite"],
-    github: "https://github.com/K3NYEL/klp_system.git",
-  },
 
+    image: "/klp_system.png",
+
+    technologies: [
+      {
+        name: "Python",
+        icon: SiPython,
+      },
+      {
+        name: "SQLite",
+        icon: SiSqlite,
+      },
+    ],
+
+    github: "https://github.com/K3NYEL/klp_system",
+  },
 ];
 
 export default projects;
