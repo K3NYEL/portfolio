@@ -1,5 +1,6 @@
 import NavBar from "./components/navigation/navbar/NavBar";
-import Card from "./components/base/Cards/Card";
+import ProjectCard from "./components/projects/ProjectCard";
+import projects from "./data/projects";
 import { useState } from "react";
 
 function App() {
@@ -91,6 +92,9 @@ function App() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
           </div>
         </section>
 
