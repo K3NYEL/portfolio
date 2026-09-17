@@ -42,7 +42,7 @@ Error generating stack: `+e.message+`
               focus:border-red-500
               focus:ring-1
               focus:ring-red-500
-            `,required:!0})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{htmlFor:`message`,className:`block text-sm font-medium text-gray-300`,children:`Mensaje`}),(0,b.jsx)(`textarea`,{id:`message`,name:`message`,rows:`5`,className:`
+            `,required:!0})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{htmlFor:`message`,className:`block text-sm font-medium text-gray-300`,children:`Mensaje y/o Asunto`}),(0,b.jsx)(`textarea`,{id:`message`,name:`message`,rows:`5`,className:`
               mt-1
               block
               min-h-32
