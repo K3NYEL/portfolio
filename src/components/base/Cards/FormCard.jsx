@@ -31,8 +31,8 @@ function FormCard() {
   };
 
   return (
-    <div className="w-full max-w-2xl rounded-2xl p-4 sm:p-8 md:p-12">
-      <form onSubmit={handleSubmit} className="space-y-5">
+    <div className="w-full max-w-2xl rounded-2xl p-0">
+      <form onSubmit={handleSubmit} className="space-y-4">
 
         {/* Nombre */}
         <div>
