@@ -7,6 +7,7 @@ import {
   SiSqlite,
   SiGnubash,
 } from "react-icons/si";
+
 import klpSystemImage from "../assets/klp_system.png";
 
 const AboutMe = [
@@ -51,6 +52,18 @@ const AboutMe = [
         name: "React",
         icon: SiReact,
       },
+      {
+        name: "Tailwind CSS",
+        icon: SiCss,
+      },
+      {
+        name: "Tkinter",
+        icon: SiPython,
+      },
+      {
+        name: "CustomTkinter",
+        icon: SiPython,
+      }
     ],
   },
 ];
