@@ -112,7 +112,7 @@ function App() {
             description={AboutMe[0].description}
             image={AboutMe[0].image}
             technologies={AboutMe[0].technologies}
-            github={AboutMe[0].github}
+            frameworks={AboutMe[0].frameworks}
           />
         </section>
 

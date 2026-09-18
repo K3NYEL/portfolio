@@ -1,4 +1,12 @@
-import { SiPython } from "react-icons/si";
+import {
+  SiPython,
+  SiJavascript,
+  SiReact,
+  SiHtml5,
+  SiCss,
+  SiSqlite,
+  SiGnubash,
+} from "react-icons/si";
 import klpSystemImage from "../assets/klp_system.png";
 
 const AboutMe = [
@@ -14,6 +22,34 @@ const AboutMe = [
       {
         name: "Python",
         icon: SiPython,
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+      },
+      {
+        name: "HTML5",
+        icon: SiHtml5,
+      },
+      {
+        name: "CSS",
+        icon: SiCss,
+      },
+      {
+        name: "SQLite",
+        icon: SiSqlite,
+      },
+      {
+        name: "Bash",
+        icon: SiGnubash,
+      },
+    ],
+
+    // Frameworks
+    frameworks: [
+      {
+        name: "React",
+        icon: SiReact,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 
-function PresentationCard({ title, description, image, technologies }) {
+function PresentationCard({ title, description, image, technologies, frameworks }) {
   return (
     <article
       className="
@@ -86,6 +86,40 @@ function PresentationCard({ title, description, image, technologies }) {
                 >
                   <Icon className="h-4 w-4 text-red-500" />
                   {tech.name}
+                </span>
+              );
+            })}
+          </div>
+
+          {/* FrameWork */}
+          <h2 className="text-lg text-red-500 font-semibold uppercase">
+            FrameWorks
+          </h2>
+
+          <div className="mb-5 flex flex-wrap gap-2">
+            {frameworks.map((fw) => {
+              const Icon = fw.icon;
+
+              return (
+                <span
+                  key={fw.name}
+                  className="
+                    inline-flex
+                    items-center
+                    gap-1.5
+                    rounded-md
+                    border
+                    border-white/5
+                    bg-gray-900/60
+                    px-2.5
+                    py-1.5
+                    text-xs
+                    font-medium
+                    text-gray-300
+                  "
+                >
+                  <Icon className="h-4 w-4 text-red-500" />
+                  {fw.name}
                 </span>
               );
             })}
