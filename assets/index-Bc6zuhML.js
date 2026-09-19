@@ -181,7 +181,7 @@ Error generating stack: `+e.message+`
               transition-colors
               duration-300
               group-hover:text-red-500
-            `,children:e.title}),(0,T.jsx)(`p`,{className:`mb-5 text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsx)(`div`,{className:`mt-auto`,children:(0,T.jsxs)(`button`,{type:`button`,onClick:u,className:`
+            `,children:e.title}),(0,T.jsx)(`p`,{className:`mb-5 text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsx)(`div`,{className:`mt-auto`,children:(0,T.jsx)(`button`,{type:`button`,onClick:u,className:`
                 inline-flex
                 items-center
                 gap-2
@@ -199,7 +199,7 @@ Error generating stack: `+e.message+`
                 hover:-translate-y-0.5
                 hover:bg-red-500
                 active:scale-95
-              `,children:[`Ver más`,(0,T.jsx)(`span`,{children:`→`})]})})]})]}),t&&(0,D.createPortal)((0,T.jsxs)(T.Fragment,{children:[(0,T.jsx)(`div`,{className:`
+              `,children:`Ver más`})})]})]}),t&&(0,D.createPortal)((0,T.jsxs)(T.Fragment,{children:[(0,T.jsx)(`div`,{className:`
                 fixed
                 inset-0
                 z-9998
@@ -374,7 +374,7 @@ Error generating stack: `+e.message+`
                               text-xs
                               font-medium
                               text-gray-300
-                            `,children:[(0,T.jsx)(t,{size:14,className:`text-red-500`}),e.name]},e.name)})})]}),(0,T.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,className:`
+                            `,children:[(0,T.jsx)(t,{size:14,className:`text-red-500`}),e.name]},e.name)})})]}),(0,T.jsx)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,className:`
                       inline-flex
                       items-center
                       gap-2
@@ -391,8 +391,8 @@ Error generating stack: `+e.message+`
                       duration-300
                       hover:-translate-y-0.5
                       hover:bg-red-500
-                    `,children:[`Ver en GitHub`,(0,T.jsx)(`span`,{children:`→`})]})]})]})})]}),document.body)]})}var Ee=[{title:`KLP SYSTEM`,description:`Sistema de gestión y facturación de escritorio desarrollado en Python.`,expandedDescription:`Sistema de gestión y facturación de escritorio desarrollado en Python.
+                    `,children:`Ver en GitHub`})]})]})})]}),document.body)]})}var Ee=[{title:`KLP SYSTEM`,description:`Sistema de gestión y facturación de escritorio desarrollado en Python.`,expandedDescription:`Sistema de gestión y facturación de escritorio desarrollado en Python.
 
-KLP SYSTEM es una aplicación de escritorio orientada a la gestión de operaciones de facturación, con almacenamiento local y una interfaz gráfica desarrollada con CustomTkinter.
+Klp System es una aplicación de escritorio orientada a la gestión de operaciones de facturación, con almacenamiento local y una interfaz gráfica desarrollada con CustomTkinter.
 
 El proyecto está actualmente en desarrollo y cuenta con herramientas para ejecución desde código fuente, pruebas automatizadas y generación de ejecutables mediante PyInstaller.`,image:`/portfolio/assets/2-CyNR-bjf.png`,images:[`src/assets/klp_system.png`,`src/assets/klp_system_2.png`,`src/assets/klp_system_3.png`],technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Pyinstaller`,icon:xe},{name:`Tkinter`,icon:be},{name:`ReportLab`,icon:ye}],github:`https://github.com/K3NYEL/klp_system`},{title:`KLP SYSTEM WEB`,description:`Aplicación web para la gestión y automatización de dispositivos.`,images:[`/klp_system_web.png`],technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Flask`,icon:be},{name:`Bootstrap`,icon:ye}],github:`https://github.com/K3NYEL/klp_system_web`}];function De(){let[e,t]=(0,_.useState)(`home`);(0,_.useEffect)(()=>{let e=[...document.querySelectorAll(`section[id]`)],n=()=>{let n=window.innerHeight/2,r=null,i=1/0;e.forEach(e=>{let t=e.getBoundingClientRect(),a=t.top+t.height/2,o=Math.abs(a-n);o<i&&(i=o,r=e)}),r&&t(r.id)};return window.addEventListener(`scroll`,n),n(),()=>{window.removeEventListener(`scroll`,n)}},[]);let n=e=>{let n=document.getElementById(e);n&&(t(e),n.scrollIntoView({behavior:`smooth`,block:`start`}))};return(0,T.jsxs)(`div`,{className:`min-h-screen bg-gray-950 text-white`,children:[(0,T.jsx)(E,{activeSection:e,onNavigate:n}),(0,T.jsxs)(`main`,{children:[(0,T.jsx)(`section`,{id:`home`,className:`scroll-mt-24 flex min-h-screen items-center justify-center px-6 py-24`,children:(0,T.jsxs)(`div`,{className:`mx-auto flex max-w-5xl flex-col items-center gap-8 text-center`,children:[(0,T.jsx)(`h1`,{className:`max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl`,children:`Kenyel Alexander Restituyo Montero`}),(0,T.jsx)(`p`,{className:`text-sm font-medium uppercase tracking-[0.3em] text-red-500`,children:`Desarrollador de software`}),(0,T.jsx)(`p`,{className:`max-w-2xl text-base leading-7 text-gray-400 sm:text-lg`,children:`Desarrollo aplicaciones y proyectos de software mientras exploro nuevas tecnologías y sigo mejorando mis habilidades.`}),(0,T.jsxs)(`div`,{className:`flex flex-col gap-3 sm:flex-row`,children:[(0,T.jsx)(`a`,{href:`#sobre_mi`,onClick:()=>n(`sobre_mi`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Leer mas`}),(0,T.jsx)(`a`,{href:`#proyectos`,onClick:()=>n(`proyectos`),className:`rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500`,children:`Ver proyectos`}),(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>n(`contacto`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Contactarme`})]})]})}),(0,T.jsxs)(`section`,{id:`sobre_mi`,className:`min-h-[calc(100vh-6rem)] scroll-mt-24 mx-auto max-w-6xl px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-8`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Sobre mí`})}),(0,T.jsx)(Ce,{title:he[0].title,description:he[0].description,image:he[0].image,technologies:he[0].technologies,frameworks:he[0].frameworks})]}),(0,T.jsxs)(`section`,{id:`proyectos`,className:`scroll-mt-24 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-10`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Proyectos`})}),(0,T.jsx)(`div`,{className:`grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3`,children:Ee.map((e,t)=>(0,T.jsx)(`div`,{className:`animate-fade-up h-full`,style:{animationDelay:`${t*120}ms`},children:(0,T.jsx)(Te,{project:e})},e.title))})]}),(0,T.jsx)(`section`,{id:`contacto`,className:`scroll-mt-24 mx-auto max-w-6xl px-6 py-16`,children:(0,T.jsx)(`div`,{className:`flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center sm:p-8`,children:(0,T.jsx)(we,{})})})]}),(0,T.jsx)(`footer`,{className:`border-t border-white/10 px-6 py-8 text-center text-sm text-gray-500`})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,T.jsx)(_.StrictMode,{children:(0,T.jsx)(De,{})}));
