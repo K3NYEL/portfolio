@@ -3,8 +3,24 @@ import { useEffect, useState } from "react";
 
 function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isChangingImage, setIsChangingImage] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
+
+  const changeImage = (index) => {
+    if (index === currentImage) return;
+
+    setIsChangingImage(true);
+
+    setTimeout(() => {
+      setCurrentImage(index);
+      setIsChangingImage(false);
+    }, 150);
+  };
 
   const openCard = () => {
+    setCurrentImage(0);
+    setIsChangingImage(false);
     setIsExpanded(true);
     document.body.style.overflow = "hidden";
   };
@@ -100,7 +116,6 @@ function ProjectCard({ project }) {
             {project.description}
           </p>
 
-          {/* Ver más */}
           <div className="mt-auto">
             <button
               type="button"
@@ -148,7 +163,7 @@ function ProjectCard({ project }) {
               onClick={closeCard}
             />
 
-            {/* Modal */}
+            {/* Contenedor del modal */}
             <div
               className="
                 fixed
@@ -158,15 +173,18 @@ function ProjectCard({ project }) {
                 items-center
                 justify-center
                 overflow-y-auto
-                p-6
+                p-4
+                sm:p-6
               "
             >
+              {/* Card expandido */}
               <article
                 className="
                   relative
                   w-full
-                  max-w-2xl
-                  overflow-hidden
+                  max-w-5xl
+                  max-h-[90vh]
+                  overflow-y-auto
                   rounded-2xl
                   border
                   border-white/10
@@ -175,66 +193,266 @@ function ProjectCard({ project }) {
                   shadow-black/60
                 "
               >
-                {/* Imagen */}
-                <div className="relative h-52 overflow-hidden bg-gray-800">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover"
-                  />
-
-                  <div
-                    className="
-                      absolute
-                      inset-0
-                      bg-gradient-to-t
-                      from-gray-900/70
-                      via-transparent
-                      to-transparent
-                    "
-                  />
-
-                  {/* Cerrar */}
+                {/* Galería */}
+                <div className="overflow-hidden bg-gray-950">
+                  {/* Imagen */}
                   <button
                     type="button"
                     onClick={closeCard}
                     className="
-                      absolute
-                      right-4
-                      top-4
-                      flex
-                      h-10
-                      w-10
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-black/60
-                      text-white
-                      backdrop-blur-md
-                      transition-all
-                      duration-200
-                      hover:bg-red-600
-                      active:scale-90
-                    "
+    absolute
+    right-4
+    top-4
+    z-20
+    flex
+    h-9
+    w-9
+    items-center
+    justify-center
+    rounded-full
+    bg-black/50
+    text-lg
+    text-white
+    backdrop-blur-md
+    transition-all
+    duration-200
+    hover:bg-red-600
+    active:scale-90
+  "
                     aria-label="Cerrar proyecto"
                   >
                     ✕
                   </button>
+                  <div
+                    className="
+                      relative
+                      h-60
+                      w-full
+                      overflow-hidden
+                      sm:h-67.5
+                    "
+                  >
+                    <img
+                      key={project.images[currentImage]}
+                      src={project.images[currentImage]}
+                      alt={`${project.title} - imagen ${currentImage + 1}`}
+                      onClick={() => setIsImageViewerOpen(true)}
+                      className={`
+                        h-full
+                        w-full
+                        object-contain
+                        p-3
+                        cursor-zoom-in
+                        transition-all
+                        duration-200
+                        ease-out
+                        ${
+                          isChangingImage
+                            ? "scale-[0.98] opacity-0"
+                            : "scale-100 opacity-100"
+                        }
+                      `}
+                    />
+
+                    {/* Anterior */}
+                    {project.images.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          changeImage(
+                            (currentImage - 1 + project.images.length) %
+                              project.images.length,
+                          )
+                        }
+                        className="
+                          absolute
+                          left-3
+                          top-1/2
+                          flex
+                          h-9
+                          w-9
+                          -translate-y-1/2
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-black/60
+                          text-xl
+                          text-white
+                          backdrop-blur-md
+                          transition-all
+                          duration-200
+                          hover:bg-red-600
+                          active:scale-90
+                        "
+                        aria-label="Imagen anterior"
+                      >
+                        ‹
+                      </button>
+                    )}
+
+                    {/* Siguiente */}
+                    {project.images.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          changeImage(
+                            (currentImage + 1) % project.images.length,
+                          )
+                        }
+                        className="
+                          absolute
+                          right-3
+                          top-1/2
+                          flex
+                          h-9
+                          w-9
+                          -translate-y-1/2
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-black/60
+                          text-xl
+                          text-white
+                          backdrop-blur-md
+                          transition-all
+                          duration-200
+                          hover:bg-red-600
+                          active:scale-90
+                        "
+                        aria-label="Imagen siguiente"
+                      >
+                        ›
+                      </button>
+                    )}
+
+                    {isImageViewerOpen && (
+                      <div
+                        className="
+      fixed
+      inset-0
+      z-[10000]
+      flex
+      items-center
+      justify-center
+      bg-black/90
+      p-4
+      backdrop-blur-md
+    "
+                        onClick={() => setIsImageViewerOpen(false)}
+                      >
+                        <img
+                          src={project.images[currentImage]}
+                          alt={`${project.title} - imagen ampliada`}
+                          className="
+        max-h-[90vh]
+        max-w-[95vw]
+        object-contain
+        cursor-zoom-out
+        rounded-lg
+        shadow-2xl
+      "
+                          onClick={(event) => event.stopPropagation()}
+                        />
+
+                        {/* Cerrar */}
+                        <button
+                          type="button"
+                          onClick={() => setIsImageViewerOpen(false)}
+                          className="
+        absolute
+        right-5
+        top-5
+        flex
+        h-10
+        w-10
+        items-center
+        justify-center
+        rounded-full
+        bg-black/60
+        text-xl
+        text-white
+        backdrop-blur-md
+        transition-all
+        duration-200
+        hover:bg-red-600
+        active:scale-90
+      "
+                          aria-label="Cerrar imagen"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Miniaturas */}
+                  {project.images.length > 1 && (
+                    <div
+                      className="
+                        flex
+                        justify-center
+                        gap-2
+                        overflow-x-auto
+                        border-t
+                        border-white/5
+                        bg-gray-900
+                        p-2
+                      "
+                    >
+                      {project.images.map((image, index) => (
+                        <button
+                          key={image}
+                          type="button"
+                          onClick={() => changeImage(index)}
+                          className={`
+                            h-12
+                            w-18
+                            shrink-0
+                            overflow-hidden
+                            rounded-md
+                            border
+                            transition-all
+                            duration-300
+                            ${
+                              currentImage === index
+                                ? "scale-105 border-red-500 opacity-100"
+                                : "border-white/10 opacity-50 hover:opacity-100"
+                            }
+                          `}
+                        >
+                          <img
+                            src={image}
+                            alt={`Miniatura ${index + 1}`}
+                            className="h-full w-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
-                {/* Contenido expandido */}
-                <div className="p-6">
-                  <h3 className="mb-3 text-2xl font-semibold text-white">
+                {/* Contenido */}
+                <div className="p-5 sm:p-6">
+                  <h3 className="mb-2 text-2xl font-semibold text-white">
                     {project.title}
                   </h3>
 
-                  <p className="mb-6 text-sm leading-6 text-gray-400">
-                    {project.description}
+                  <p className="mb-5 text-sm leading-6 text-gray-400">
+                    {project.expandedDescription || project.description}
                   </p>
 
                   {/* Tecnologías */}
-                  <div className="mb-6">
-                    <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-300">
+                  <div className="mb-5">
+                    <h4
+                      className="
+                        mb-2
+                        text-sm
+                        font-semibold
+                        uppercase
+                        tracking-wider
+                        text-gray-300
+                      "
+                    >
                       Tecnologías
                     </h4>
 
@@ -260,11 +478,7 @@ function ProjectCard({ project }) {
                               text-gray-300
                             "
                           >
-                            <Icon
-                              size={14}
-                              className="text-red-500"
-                            />
-
+                            <Icon size={14} className="text-red-500" />
                             {tech.name}
                           </span>
                         );

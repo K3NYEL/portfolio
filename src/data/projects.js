@@ -1,15 +1,25 @@
 import { SiPython, SiSqlite } from "react-icons/si";
 import { FaBox, FaFilePdf, FaDesktop } from "react-icons/fa";
-import klpSystemImage from "../assets/klp_system.png";
+import KlpSystemImage from "../assets/klp_system.png";
 
 const projects = [
   {
     title: "KLP SYSTEM",
 
     description:
-      "Aplicación de escritorio para la gestión y automatización de dispositivos.",
+      "Sistema de gestión y facturación de escritorio desarrollado en Python.",
 
-    image: klpSystemImage,
+    expandedDescription:
+      "Sistema de gestión y facturación de escritorio desarrollado en Python.\n\n" +
+      "KLP SYSTEM es una aplicación de escritorio orientada a la gestión de operaciones de facturación, con almacenamiento local y una interfaz gráfica desarrollada con CustomTkinter.\n\n" +
+      "El proyecto está actualmente en desarrollo y cuenta con herramientas para ejecución desde código fuente, pruebas automatizadas y generación de ejecutables mediante PyInstaller.",
+
+    image: KlpSystemImage,
+    images: [
+      "src/assets/klp_system.png",
+      "src/assets/klp_system_2.png",
+      "src/assets/klp_system_3.png",
+    ],
 
     technologies: [
       {
@@ -42,7 +52,7 @@ const projects = [
     description:
       "Aplicación web para la gestión y automatización de dispositivos.",
 
-    image: "/klp_system_web.png",
+    images: ["/klp_system_web.png"],
 
     technologies: [
       {
