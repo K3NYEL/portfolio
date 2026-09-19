@@ -510,7 +510,6 @@ function ProjectCard({ project }) {
                     "
                   >
                     Ver en GitHub
-                    <span>→</span>
                   </a>
                 </div>
               </article>
