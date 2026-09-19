@@ -63,152 +63,206 @@ Error generating stack: `+e.message+`
                     text-xs
                     font-medium
                     text-gray-300
-                  `,children:[(0,T.jsx)(t,{className:`h-4 w-4 text-red-500`}),e.name]},e.name)})}),(0,T.jsxs)(`div`,{className:`flex gap-3`,children:[(0,T.jsx)(`a`,{href:`https://github.com/K3NYEL/`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(ye,{size:20})}),(0,T.jsx)(`a`,{href:`https://www.linkedin.com/in/TU_USUARIO`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(ve,{size:20})}),(0,T.jsx)(`a`,{href:`https://stackoverflow.com/users/TU_ID`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(_e,{size:20})})]})]})]})})}function E(){let[e,t]=(0,_.useState)(``);return(0,T.jsx)(`div`,{className:`w-full max-w-2xl rounded-2xl p-0`,children:(0,T.jsxs)(`form`,{onSubmit:async e=>{e.preventDefault();let n=e.currentTarget;t(`Enviando...`);try{(await fetch(`https://formspree.io/f/xwlpkjkb`,{method:`POST`,body:new FormData(n),headers:{Accept:`application/json`}})).ok?(t(`Mensaje enviado correctamente.`),n.reset()):t(`No se pudo enviar el mensaje.`)}catch{t(`Ocurrió un error al enviar el mensaje.`)}},className:`space-y-4`,children:[(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`name`,className:`block text-sm font-medium text-gray-300`,children:`Nombre`}),(0,T.jsx)(`input`,{type:`text`,id:`name`,name:`name`,className:`
-              mt-1
-              block
-              h-10
+                  `,children:[(0,T.jsx)(t,{className:`h-4 w-4 text-red-500`}),e.name]},e.name)})}),(0,T.jsxs)(`div`,{className:`flex gap-3`,children:[(0,T.jsx)(`a`,{href:`https://github.com/K3NYEL/`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(ye,{size:20})}),(0,T.jsx)(`a`,{href:`https://www.linkedin.com/in/TU_USUARIO`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(ve,{size:20})}),(0,T.jsx)(`a`,{href:`https://stackoverflow.com/users/TU_ID`,target:`_blank`,rel:`noopener noreferrer`,className:`flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500`,children:(0,T.jsx)(_e,{size:20})})]})]})]})})}function E(){let[e,t]=(0,_.useState)(``);return(0,T.jsxs)(`div`,{className:`flex w-full flex-col gap-10 rounded-2xl p-0 md:flex-row md:items-center`,children:[(0,T.jsxs)(`div`,{className:`flex-1 text-left`,children:[(0,T.jsx)(`h2`,{className:`mb-3 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Formulario de Contacto`}),(0,T.jsx)(`p`,{className:`max-w-xl text-gray-400`,children:`Si quieres conocer más sobre mis proyectos o ponerte en contacto conmigo, puedes hacerlo aquí.`})]}),(0,T.jsx)(`div`,{className:`w-full flex-1`,children:(0,T.jsxs)(`form`,{onSubmit:async e=>{e.preventDefault();let n=e.currentTarget;t(`Enviando...`);try{(await fetch(`https://formspree.io/f/xwlpkjkb`,{method:`POST`,body:new FormData(n),headers:{Accept:`application/json`}})).ok?(t(`Mensaje enviado correctamente.`),n.reset()):t(`No se pudo enviar el mensaje.`)}catch{t(`Ocurrió un error al enviar el mensaje.`)}},className:`space-y-2.5`,children:[(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`name`,className:`block text-sm font-medium text-gray-300`,children:`Nombre`}),(0,T.jsx)(`input`,{type:`text`,id:`name`,name:`name`,className:`
+                mt-1
+                block
+                h-9
+                w-full
+                rounded-md
+                border
+                border-white/10
+                bg-white/5
+                px-3
+                text-white
+                shadow-sm
+                outline-none
+                transition
+                placeholder:text-gray-500
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+              `,required:!0})]}),(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`email`,className:`block text-sm font-medium text-gray-300`,children:`Correo electrónico`}),(0,T.jsx)(`input`,{type:`email`,id:`email`,name:`email`,className:`
+                mt-1
+                block
+                h-9
+                w-full
+                rounded-md
+                border
+                border-white/10
+                bg-white/5
+                px-3
+                text-white
+                shadow-sm
+                outline-none
+                transition
+                placeholder:text-gray-500
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+              `,required:!0})]}),(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`message`,className:`block text-sm font-medium text-gray-300`,children:`Mensaje y/o Asunto`}),(0,T.jsx)(`textarea`,{id:`message`,name:`message`,rows:`3`,className:`
+                mt-1
+                block
+                h-24
+                w-full
+                resize-y
+                rounded-md
+                border
+                border-white/10
+                bg-white/5
+                p-3
+                text-white
+                shadow-sm
+                outline-none
+                transition
+                placeholder:text-gray-500
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+              `,required:!0})]}),(0,T.jsx)(`button`,{type:`submit`,className:`
+              inline-flex
               w-full
-              rounded-md
-              border
-              border-white/10
-              bg-white/5
-              px-3
+              items-center
+              justify-center
+              rounded-lg
+              bg-red-600
+              px-6
+              py-2.5
+              text-sm
+              font-semibold
               text-white
-              shadow-sm
-              outline-none
               transition
-              placeholder:text-gray-500
-              focus:border-red-500
-              focus:ring-1
-              focus:ring-red-500
-            `,required:!0})]}),(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`email`,className:`block text-sm font-medium text-gray-300`,children:`Correo electrónico`}),(0,T.jsx)(`input`,{type:`email`,id:`email`,name:`email`,className:`
-              mt-1
-              block
-              h-10
-              w-full
-              rounded-md
-              border
-              border-white/10
-              bg-white/5
-              px-3
-              text-white
-              shadow-sm
-              outline-none
-              transition
-              placeholder:text-gray-500
-              focus:border-red-500
-              focus:ring-1
-              focus:ring-red-500
-            `,required:!0})]}),(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`label`,{htmlFor:`message`,className:`block text-sm font-medium text-gray-300`,children:`Mensaje y/o Asunto`}),(0,T.jsx)(`textarea`,{id:`message`,name:`message`,rows:`5`,className:`
-              mt-1
-              block
-              min-h-32
-              w-full
-              resize-y
-              rounded-md
-              border
-              border-white/10
-              bg-white/5
-              p-3
-              text-white
-              shadow-sm
-              outline-none
-              transition
-              placeholder:text-gray-500
-              focus:border-red-500
-              focus:ring-1
-              focus:ring-red-500
-            `,required:!0})]}),(0,T.jsx)(`button`,{type:`submit`,className:`
-            inline-flex
-            w-full
-            items-center
-            justify-center
-            rounded-lg
-            bg-red-600
-            px-6
-            py-3
-            text-sm
-            font-semibold
-            text-white
-            transition
-            duration-200
-            hover:bg-red-500
-            active:scale-[0.98]
-            sm:w-auto
-          `,children:`Enviar mensaje`}),e&&(0,T.jsx)(`p`,{className:`text-sm text-gray-400`,children:e})]})})}function D({activeSection:e,onNavigate:t}){let[n,r]=(0,_.useState)(!1),i=[{name:`Inicio`,href:`#home`,id:`home`},{name:`Sobre mí`,href:`#sobre_mi`,id:`sobre_mi`},{name:`Proyectos`,href:`#proyectos`,id:`proyectos`},{name:`Contacto`,href:`#contacto`,id:`contacto`}],a=e=>{t(e),r(!1)};return(0,T.jsxs)(`nav`,{className:`fixed top-0 z-50 w-full border-b border-white/10 bg-gray-950/80 px-6 py-4 backdrop-blur-md`,children:[(0,T.jsxs)(`div`,{className:`mx-auto flex max-w-6xl items-center justify-between`,children:[(0,T.jsx)(`a`,{href:`#home`,onClick:()=>a(`home`),className:`text-xl font-bold tracking-tight text-white transition hover:text-red-500`}),(0,T.jsx)(`ul`,{className:`hidden items-center gap-2 md:flex`,children:i.map(t=>{let n=e===t.id;return(0,T.jsx)(`li`,{children:(0,T.jsx)(`a`,{href:t.href,onClick:()=>a(t.id),className:`
+              duration-200
+              hover:bg-red-500
+              active:scale-[0.98]
+              sm:w-auto
+            `,children:`Enviar mensaje`}),e&&(0,T.jsx)(`p`,{className:`text-sm text-gray-400`,children:e})]})})]})}function D({activeSection:e,onNavigate:t}){let[n,r]=(0,_.useState)(!1),i=[{name:`Inicio`,href:`#home`,id:`home`},{name:`Sobre mí`,href:`#sobre_mi`,id:`sobre_mi`},{name:`Proyectos`,href:`#proyectos`,id:`proyectos`},{name:`Contacto`,href:`#contacto`,id:`contacto`}],a=e=>{t(e),r(!1)};return(0,T.jsxs)(`nav`,{className:`fixed top-0 z-50 w-full border-b border-white/10 bg-gray-950/80 px-6 py-4 backdrop-blur-md`,children:[(0,T.jsxs)(`div`,{className:`mx-auto flex max-w-6xl items-center justify-between`,children:[(0,T.jsx)(`a`,{href:`#home`,onClick:()=>a(`home`),className:`text-xl font-bold tracking-tight text-white transition hover:text-red-500`}),(0,T.jsx)(`ul`,{className:`hidden items-center gap-2 md:flex`,children:i.map(t=>{let n=e===t.id;return(0,T.jsx)(`li`,{children:(0,T.jsx)(`a`,{href:t.href,onClick:()=>a(t.id),className:`
                     rounded-lg px-4 py-2 text-sm font-medium transition
                     ${n?`bg-white/10 text-white`:`text-gray-400 hover:bg-white/10 hover:text-white`}
                   `,children:t.name})},t.id)})}),(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>a(`contacto`),className:`hidden rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500 md:block`,children:`Contacto`}),(0,T.jsx)(`button`,{type:`button`,onClick:()=>r(!n),className:`rounded-lg p-2 text-gray-300 transition hover:bg-white/10 hover:text-white md:hidden`,"aria-label":`Abrir menú`,"aria-expanded":n,children:n?(0,T.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,className:`h-6 w-6`,fill:`none`,viewBox:`0 0 24 24`,stroke:`currentColor`,strokeWidth:2,children:(0,T.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M6 18L18 6M6 6l12 12`})}):(0,T.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,className:`h-6 w-6`,fill:`none`,viewBox:`0 0 24 24`,stroke:`currentColor`,strokeWidth:2,children:(0,T.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M4 6h16M4 12h16M4 18h16`})})})]}),n&&(0,T.jsx)(`div`,{className:`border-t border-white/10 md:hidden`,children:(0,T.jsxs)(`ul`,{className:`mx-auto flex max-w-6xl flex-col gap-2 px-2 py-4`,children:[i.map(t=>{let n=e===t.id;return(0,T.jsx)(`li`,{children:(0,T.jsx)(`a`,{href:t.href,onClick:()=>a(t.id),className:`
                       block rounded-lg px-4 py-3 text-sm font-medium transition
                       ${n?`bg-white/10 text-white`:`text-gray-400 hover:bg-white/10 hover:text-white`}
-                    `,children:t.name})},t.id)}),(0,T.jsx)(`li`,{className:`pt-2`,children:(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>a(`contacto`),className:`block rounded-lg bg-red-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-red-500`,children:`Contacto`})})]})})]})}var Te=m();function Ee({project:e}){let t=(0,_.useRef)(null),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(null),o=()=>{let e=t.current;if(!e)return;let n=e.getBoundingClientRect();a({top:n.top,left:n.left,width:n.width,height:n.height}),r(!0),document.body.style.overflow=`hidden`},s=()=>{r(!1),document.body.style.overflow=``};(0,_.useEffect)(()=>{let e=e=>{e.key===`Escape`&&s()};return document.addEventListener(`keydown`,e),()=>{document.removeEventListener(`keydown`,e),document.body.style.overflow=``}},[]);let c=n&&i?{height:i.height,width:i.width}:void 0,l=n&&i?(0,Te.createPortal)((0,T.jsxs)(T.Fragment,{children:[(0,T.jsx)(`div`,{className:`
+                    `,children:t.name})},t.id)}),(0,T.jsx)(`li`,{className:`pt-2`,children:(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>a(`contacto`),className:`block rounded-lg bg-red-600 px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-red-500`,children:`Contacto`})})]})})]})}var Te=m();function Ee({project:e}){let[t,n]=(0,_.useState)(!1),r=()=>{n(!0),document.body.style.overflow=`hidden`},i=()=>{n(!1),document.body.style.overflow=``};return(0,_.useEffect)(()=>{let e=e=>{e.key===`Escape`&&i()};return document.addEventListener(`keydown`,e),()=>{document.removeEventListener(`keydown`,e),document.body.style.overflow=``}},[]),(0,T.jsxs)(T.Fragment,{children:[(0,T.jsxs)(`article`,{className:`
+          group
+          flex
+          h-full
+          flex-col
+          overflow-hidden
+          rounded-2xl
+          border
+          border-white/10
+          bg-gray-900
+          shadow-lg
+          shadow-black/20
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:border-red-500/30
+          hover:shadow-xl
+          hover:shadow-red-500/5
+        `,children:[(0,T.jsxs)(`div`,{className:`relative h-44 shrink-0 overflow-hidden bg-gray-800`,children:[(0,T.jsx)(`img`,{src:e.image,alt:e.title,className:`
+              h-full
+              w-full
+              object-cover
+              transition-transform
+              duration-500
+              group-hover:scale-105
+            `}),(0,T.jsx)(`div`,{className:`
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-gray-900/70
+              via-transparent
+              to-transparent
+            `})]}),(0,T.jsxs)(`div`,{className:`flex flex-1 flex-col p-5`,children:[(0,T.jsx)(`h3`,{className:`
+              mb-3
+              text-xl
+              font-semibold
+              text-white
+              transition-colors
+              duration-300
+              group-hover:text-red-500
+            `,children:e.title}),(0,T.jsx)(`p`,{className:`mb-5 text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsx)(`div`,{className:`mt-auto`,children:(0,T.jsxs)(`button`,{type:`button`,onClick:r,className:`
+                inline-flex
+                items-center
+                gap-2
+                rounded-lg
+                bg-red-600
+                px-5
+                py-2.5
+                text-sm
+                font-semibold
+                text-white
+                shadow-lg
+                shadow-red-600/20
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:bg-red-500
+                active:scale-95
+              `,children:[`Ver más`,(0,T.jsx)(`span`,{children:`→`})]})})]})]}),t&&(0,Te.createPortal)((0,T.jsxs)(T.Fragment,{children:[(0,T.jsx)(`div`,{className:`
                 fixed
                 inset-0
-                z-9998
+                z-[9998]
                 bg-black/70
                 backdrop-blur-sm
-                transition-opacity
-                duration-300
-              `,onClick:s}),(0,T.jsxs)(`article`,{className:`
+              `,onClick:i}),(0,T.jsx)(`div`,{className:`
                 fixed
-                z-9999
-                overflow-hidden
-                rounded-2xl
-                border
-                border-white/10
-                bg-gray-900
-                shadow-2xl
-                shadow-black/60
-                transition-all
-                duration-700
-                ease-[cubic-bezier(0.16,1,0.3,1)]
-              `,style:{top:i.top,left:i.left,width:i.width,height:i.height,transform:`
-                  translate(
-                    calc(50vw - ${i.left+i.width/2}px),
-                    calc(50vh - ${i.top+i.height/2}px)
-                  )
-                  scale(
-                    ${Math.min(window.innerWidth*.92/i.width,window.innerHeight*.82/i.height,2.4)}
-                  )
-                `,transformOrigin:`center center`},children:[(0,T.jsxs)(`div`,{className:`relative h-52 shrink-0 overflow-hidden bg-gray-800`,children:[(0,T.jsx)(`img`,{src:e.image,alt:e.title,className:`h-full w-full object-cover`}),(0,T.jsx)(`div`,{className:`
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-gray-900/70
-                    via-transparent
-                    to-transparent
-                  `}),(0,T.jsx)(`button`,{type:`button`,onClick:s,className:`
-                    absolute
-                    right-4
-                    top-4
-                    z-10
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-black/60
-                    text-white
-                    backdrop-blur-md
-                    transition-all
-                    duration-200
-                    hover:bg-red-600
-                    active:scale-90
-                  `,"aria-label":`Cerrar proyecto`,children:`✕`})]}),(0,T.jsxs)(`div`,{className:`flex flex-1 flex-col p-6`,children:[(0,T.jsx)(`h3`,{className:`mb-3 text-xl font-semibold text-white`,children:e.title}),(0,T.jsx)(`p`,{className:`mb-5 text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsx)(`div`,{className:`mb-6 flex flex-wrap gap-2`,children:e.technologies.map(e=>{let t=e.icon;return(0,T.jsxs)(`span`,{className:`
-                          inline-flex
-                          items-center
-                          gap-1.5
-                          rounded-md
-                          border
-                          border-white/5
-                          bg-gray-800
-                          px-2.5
-                          py-1.5
-                          text-xs
-                          font-medium
-                          text-gray-300
-                        `,children:[(0,T.jsx)(t,{size:14,className:`text-red-500`}),e.name]},e.name)})}),(0,T.jsx)(`div`,{className:`mt-auto`,children:(0,T.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,onClick:e=>e.stopPropagation(),className:`
+                inset-0
+                z-[9999]
+                flex
+                items-center
+                justify-center
+                overflow-y-auto
+                p-6
+              `,children:(0,T.jsxs)(`article`,{className:`
+                  relative
+                  w-full
+                  max-w-2xl
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-gray-900
+                  shadow-2xl
+                  shadow-black/60
+                `,children:[(0,T.jsxs)(`div`,{className:`relative h-52 overflow-hidden bg-gray-800`,children:[(0,T.jsx)(`img`,{src:e.image,alt:e.title,className:`h-full w-full object-cover`}),(0,T.jsx)(`div`,{className:`
+                      absolute
+                      inset-0
+                      bg-gradient-to-t
+                      from-gray-900/70
+                      via-transparent
+                      to-transparent
+                    `}),(0,T.jsx)(`button`,{type:`button`,onClick:i,className:`
+                      absolute
+                      right-4
+                      top-4
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-black/60
+                      text-white
+                      backdrop-blur-md
+                      transition-all
+                      duration-200
+                      hover:bg-red-600
+                      active:scale-90
+                    `,"aria-label":`Cerrar proyecto`,children:`✕`})]}),(0,T.jsxs)(`div`,{className:`p-6`,children:[(0,T.jsx)(`h3`,{className:`mb-3 text-2xl font-semibold text-white`,children:e.title}),(0,T.jsx)(`p`,{className:`mb-6 text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsxs)(`div`,{className:`mb-6`,children:[(0,T.jsx)(`h4`,{className:`mb-3 text-sm font-semibold uppercase tracking-wider text-gray-300`,children:`Tecnologías`}),(0,T.jsx)(`div`,{className:`flex flex-wrap gap-2`,children:e.technologies.map(e=>{let t=e.icon;return(0,T.jsxs)(`span`,{className:`
+                              inline-flex
+                              items-center
+                              gap-1.5
+                              rounded-md
+                              border
+                              border-white/5
+                              bg-gray-800
+                              px-2.5
+                              py-1.5
+                              text-xs
+                              font-medium
+                              text-gray-300
+                            `,children:[(0,T.jsx)(t,{size:14,className:`text-red-500`}),e.name]},e.name)})})]}),(0,T.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,className:`
                       inline-flex
                       items-center
                       gap-2
@@ -225,76 +279,4 @@ Error generating stack: `+e.message+`
                       duration-300
                       hover:-translate-y-0.5
                       hover:bg-red-500
-                    `,children:[`Ver en GitHub`,(0,T.jsx)(`span`,{children:`→`})]})})]})]})]}),document.body):null;return(0,T.jsxs)(T.Fragment,{children:[n&&i?(0,T.jsx)(`div`,{style:c}):(0,T.jsxs)(`article`,{ref:t,onClick:o,className:`
-            group
-            flex
-            h-full
-            cursor-pointer
-            flex-col
-            overflow-hidden
-            rounded-2xl
-            border
-            border-white/10
-            bg-gray-900
-            shadow-lg
-            shadow-black/20
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:border-red-500/30
-            hover:shadow-xl
-            hover:shadow-red-500/5
-          `,children:[(0,T.jsxs)(`div`,{className:`relative h-52 shrink-0 overflow-hidden bg-gray-800`,children:[(0,T.jsx)(`img`,{src:e.image,alt:e.title,className:`
-                h-full
-                w-full
-                object-cover
-                transition-transform
-                duration-500
-                group-hover:scale-105
-              `}),(0,T.jsx)(`div`,{className:`
-                absolute
-                inset-0
-                bg-gradient-to-t
-                from-gray-900/70
-                via-transparent
-                to-transparent
-              `})]}),(0,T.jsxs)(`div`,{className:`flex flex-1 flex-col p-6`,children:[(0,T.jsx)(`h3`,{className:`
-                mb-3
-                text-xl
-                font-semibold
-                text-white
-                transition-colors
-                duration-300
-                group-hover:text-red-500
-              `,children:e.title}),(0,T.jsx)(`p`,{className:`mb-5 min-h-[72px] text-sm leading-6 text-gray-400`,children:e.description}),(0,T.jsx)(`div`,{className:`mb-6 flex flex-wrap gap-2`,children:e.technologies.map(e=>{let t=e.icon;return(0,T.jsxs)(`span`,{className:`
-                      inline-flex
-                      items-center
-                      gap-1.5
-                      rounded-md
-                      border
-                      border-white/5
-                      bg-gray-800
-                      px-2.5
-                      py-1.5
-                      text-xs
-                      font-medium
-                      text-gray-300
-                    `,children:[(0,T.jsx)(t,{size:14,className:`text-red-500`}),e.name]},e.name)})}),(0,T.jsx)(`div`,{className:`mt-auto`,children:(0,T.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,onClick:e=>e.stopPropagation(),className:`
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-lg
-                  bg-red-600
-                  px-5
-                  py-2.5
-                  text-sm
-                  font-semibold
-                  text-white
-                  shadow-lg
-                  shadow-red-600/20
-                  transition-all
-                  duration-300
-                  hover:-translate-y-0.5
-                  hover:bg-red-500
-                  active:scale-95
-                `,children:[`Ver en GitHub`,(0,T.jsx)(`span`,{children:`→`})]})})]})]}),l]})}var De=[{title:`KLP SYSTEM`,description:`Aplicación de escritorio para la gestión y automatización de dispositivos.`,image:he,technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Pyinstaller`,icon:Se},{name:`Tkinter`,icon:xe},{name:`ReportLab`,icon:be}],github:`https://github.com/K3NYEL/klp_system`},{title:`KLP SYSTEM WEB`,description:`Aplicación web para la gestión y automatización de dispositivos.`,image:`/klp_system_web.png`,technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Flask`,icon:xe},{name:`Bootstrap`,icon:be}],github:`https://github.com/K3NYEL/klp_system_web`}];function Oe(){let[e,t]=(0,_.useState)(`home`);(0,_.useEffect)(()=>{let e=[...document.querySelectorAll(`section[id]`)],n=new IntersectionObserver(e=>{let n=e.filter(e=>e.isIntersecting).sort((e,t)=>t.intersectionRatio-e.intersectionRatio);n.length>0&&t(n[0].target.id)},{root:null,threshold:[.25,.5,.75],rootMargin:`-80px 0px -20% 0px`});return e.forEach(e=>{n.observe(e)}),()=>{n.disconnect()}},[]);let n=e=>{t(e)};return(0,T.jsxs)(`div`,{className:`min-h-screen bg-gray-950 text-white`,children:[(0,T.jsx)(D,{activeSection:e,onNavigate:n}),(0,T.jsxs)(`main`,{children:[(0,T.jsx)(`section`,{id:`home`,className:`scroll-mt-24 flex min-h-screen items-center justify-center px-6 py-24`,children:(0,T.jsxs)(`div`,{className:`mx-auto flex max-w-5xl flex-col items-center gap-8 text-center`,children:[(0,T.jsx)(`h1`,{className:`max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl`,children:`Kenyel Alexander Restituyo Montero`}),(0,T.jsx)(`p`,{className:`text-sm font-medium uppercase tracking-[0.3em] text-red-500`,children:`Desarrollador de software`}),(0,T.jsx)(`p`,{className:`max-w-2xl text-base leading-7 text-gray-400 sm:text-lg`,children:`Desarrollo aplicaciones y proyectos de software mientras exploro nuevas tecnologías y sigo mejorando mis habilidades.`}),(0,T.jsxs)(`div`,{className:`flex flex-col gap-3 sm:flex-row`,children:[(0,T.jsx)(`a`,{href:`#sobre_mi`,onClick:()=>n(`sobre_mi`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Leer mas`}),(0,T.jsx)(`a`,{href:`#proyectos`,onClick:()=>n(`proyectos`),className:`rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500`,children:`Ver proyectos`}),(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>n(`contacto`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Contactarme`})]})]})}),(0,T.jsxs)(`section`,{id:`sobre_mi`,className:`min-h-[calc(100vh-6rem)] scroll-mt-24 mx-auto max-w-6xl px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-8`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Sobre mí`})}),(0,T.jsx)(we,{title:ge[0].title,description:ge[0].description,image:ge[0].image,technologies:ge[0].technologies,frameworks:ge[0].frameworks})]}),(0,T.jsxs)(`section`,{id:`proyectos`,className:`scroll-mt-24 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-10`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Proyectos`})}),(0,T.jsx)(`div`,{className:`grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3`,children:De.map((e,t)=>(0,T.jsx)(`div`,{className:`animate-fade-up h-full`,style:{animationDelay:`${t*120}ms`},children:(0,T.jsx)(Ee,{project:e})},e.title))})]}),(0,T.jsx)(`section`,{id:`contacto`,className:`scroll-mt-24 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-16`,children:(0,T.jsxs)(`div`,{className:`flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center sm:p-8`,children:[(0,T.jsx)(`h2`,{className:`mb-4 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Formulario de Contacto`}),(0,T.jsx)(`p`,{className:`mx-auto mb-8 max-w-xl text-gray-400`,children:`Si quieres conocer más sobre mis proyectos o ponerte en contacto conmigo, puedes hacerlo aquí.`}),(0,T.jsx)(E,{})]})})]}),(0,T.jsx)(`footer`,{className:`border-t border-white/10 px-6 py-8 text-center text-sm text-gray-500`})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,T.jsx)(_.StrictMode,{children:(0,T.jsx)(Oe,{})}));
+                    `,children:[`Ver en GitHub`,(0,T.jsx)(`span`,{children:`→`})]})]})]})})]}),document.body)]})}var De=[{title:`KLP SYSTEM`,description:`Aplicación de escritorio para la gestión y automatización de dispositivos.`,image:he,technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Pyinstaller`,icon:Se},{name:`Tkinter`,icon:xe},{name:`ReportLab`,icon:be}],github:`https://github.com/K3NYEL/klp_system`},{title:`KLP SYSTEM WEB`,description:`Aplicación web para la gestión y automatización de dispositivos.`,image:`/klp_system_web.png`,technologies:[{name:`Python`,icon:w},{name:`SQLite`,icon:le},{name:`Flask`,icon:xe},{name:`Bootstrap`,icon:be}],github:`https://github.com/K3NYEL/klp_system_web`}];function Oe(){let[e,t]=(0,_.useState)(`home`);(0,_.useEffect)(()=>{let e=[...document.querySelectorAll(`section[id]`)],n=()=>{let n=window.innerHeight/2,r=null,i=1/0;e.forEach(e=>{let t=e.getBoundingClientRect(),a=t.top+t.height/2,o=Math.abs(a-n);o<i&&(i=o,r=e)}),r&&t(r.id)};return window.addEventListener(`scroll`,n),n(),()=>{window.removeEventListener(`scroll`,n)}},[]);let n=e=>{let n=document.getElementById(e);n&&(t(e),n.scrollIntoView({behavior:`smooth`,block:`start`}))};return(0,T.jsxs)(`div`,{className:`min-h-screen bg-gray-950 text-white`,children:[(0,T.jsx)(D,{activeSection:e,onNavigate:n}),(0,T.jsxs)(`main`,{children:[(0,T.jsx)(`section`,{id:`home`,className:`scroll-mt-24 flex min-h-screen items-center justify-center px-6 py-24`,children:(0,T.jsxs)(`div`,{className:`mx-auto flex max-w-5xl flex-col items-center gap-8 text-center`,children:[(0,T.jsx)(`h1`,{className:`max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl`,children:`Kenyel Alexander Restituyo Montero`}),(0,T.jsx)(`p`,{className:`text-sm font-medium uppercase tracking-[0.3em] text-red-500`,children:`Desarrollador de software`}),(0,T.jsx)(`p`,{className:`max-w-2xl text-base leading-7 text-gray-400 sm:text-lg`,children:`Desarrollo aplicaciones y proyectos de software mientras exploro nuevas tecnologías y sigo mejorando mis habilidades.`}),(0,T.jsxs)(`div`,{className:`flex flex-col gap-3 sm:flex-row`,children:[(0,T.jsx)(`a`,{href:`#sobre_mi`,onClick:()=>n(`sobre_mi`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Leer mas`}),(0,T.jsx)(`a`,{href:`#proyectos`,onClick:()=>n(`proyectos`),className:`rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500`,children:`Ver proyectos`}),(0,T.jsx)(`a`,{href:`#contacto`,onClick:()=>n(`contacto`),className:`rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:bg-white/10 hover:text-white`,children:`Contactarme`})]})]})}),(0,T.jsxs)(`section`,{id:`sobre_mi`,className:`min-h-[calc(100vh-6rem)] scroll-mt-24 mx-auto max-w-6xl px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-8`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Sobre mí`})}),(0,T.jsx)(we,{title:ge[0].title,description:ge[0].description,image:ge[0].image,technologies:ge[0].technologies,frameworks:ge[0].frameworks})]}),(0,T.jsxs)(`section`,{id:`proyectos`,className:`scroll-mt-24 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-16`,children:[(0,T.jsx)(`div`,{className:`mb-10`,children:(0,T.jsx)(`h2`,{className:`mb-2 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl`,children:`Proyectos`})}),(0,T.jsx)(`div`,{className:`grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3`,children:De.map((e,t)=>(0,T.jsx)(`div`,{className:`animate-fade-up h-full`,style:{animationDelay:`${t*120}ms`},children:(0,T.jsx)(Ee,{project:e})},e.title))})]}),(0,T.jsx)(`section`,{id:`contacto`,className:`scroll-mt-24 mx-auto max-w-6xl px-6 py-16`,children:(0,T.jsx)(`div`,{className:`flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center sm:p-8`,children:(0,T.jsx)(E,{})})})]}),(0,T.jsx)(`footer`,{className:`border-t border-white/10 px-6 py-8 text-center text-sm text-gray-500`})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,T.jsx)(_.StrictMode,{children:(0,T.jsx)(Oe,{})}));
