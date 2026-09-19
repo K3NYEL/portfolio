@@ -141,7 +141,6 @@ function ProjectCard({ project }) {
               "
             >
               Ver más
-              <span>→</span>
             </button>
           </div>
         </div>
@@ -156,7 +155,7 @@ function ProjectCard({ project }) {
               className="
                 fixed
                 inset-0
-                z-[9998]
+                z-9998
                 bg-black/70
                 backdrop-blur-sm
               "
@@ -168,7 +167,7 @@ function ProjectCard({ project }) {
               className="
                 fixed
                 inset-0
-                z-[9999]
+                z-9999
                 flex
                 items-center
                 justify-center
@@ -330,7 +329,7 @@ function ProjectCard({ project }) {
                         className="
       fixed
       inset-0
-      z-[10000]
+      z-10000
       flex
       items-center
       justify-center

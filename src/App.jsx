@@ -128,6 +128,7 @@ function App() {
             technologies={AboutMe[0].technologies}
             frameworks={AboutMe[0].frameworks}
           />
+          
         </section>
 
         {/* Projects */}
