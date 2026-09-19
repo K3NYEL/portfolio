@@ -13,34 +13,48 @@ function App() {
   useEffect(() => {
     const sections = [...document.querySelectorAll("section[id]")];
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const handleScroll = () => {
+      const viewportCenter = window.innerHeight / 2;
 
-        if (visibleSections.length > 0) {
-          setActiveSection(visibleSections[0].target.id);
+      let closestSection = null;
+      let closestDistance = Infinity;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        const sectionCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(sectionCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestSection = section;
         }
-      },
-      {
-        root: null,
-        threshold: [0.25, 0.5, 0.75],
-        rootMargin: "-80px 0px -20% 0px",
-      },
-    );
+      });
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      if (closestSection) {
+        setActiveSection(closestSection.id);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const handleNavigation = (section) => {
+    const element = document.getElementById(section);
+
+    if (!element) return;
+
     setActiveSection(section);
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -145,18 +159,9 @@ function App() {
         {/* Contact */}
         <section
           id="contacto"
-          className="scroll-mt-24 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-16"
+          className="scroll-mt-24 mx-auto max-w-6xl px-6 py-16"
         >
           <div className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center sm:p-8">
-            <h2 className="mb-4 text-3xl font-bold uppercase tracking-widest text-red-500 sm:text-4xl">
-              Formulario de Contacto
-            </h2>
-
-            <p className="mx-auto mb-8 max-w-xl text-gray-400">
-              Si quieres conocer más sobre mis proyectos o ponerte en contacto
-              conmigo, puedes hacerlo aquí.
-            </p>
-
             <FormCard />
           </div>
         </section>
