@@ -51,7 +51,7 @@ function FormCard() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-300"
+              className="flex items-center text-sm font-medium text-gray-300"
             >
               Nombre
             </label>
@@ -87,7 +87,7 @@ function FormCard() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-300"
+              className="flex items-center text-sm font-medium text-gray-300"
             >
               Correo electrónico
             </label>
@@ -123,7 +123,7 @@ function FormCard() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-300"
+              className="flex items-center text-sm font-medium text-gray-300"
             >
               Mensaje y/o Asunto
             </label>

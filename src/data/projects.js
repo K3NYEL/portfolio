@@ -1,4 +1,4 @@
-import { SiPython, SiSqlite } from "react-icons/si";
+import { SiFlutter, SiPython, SiSqlite } from "react-icons/si";
 import { FaBox, FaFilePdf, FaDesktop } from "react-icons/fa";
 import KlpSystemImage from "../assets/2.png";
 
@@ -47,25 +47,25 @@ const projects = [
     github: "https://github.com/K3NYEL/klp_system",
   },
   {
-    title: "KLP SYSTEM WEB",
+    title: "MyFinc",
 
     description:
-      "Aplicación web para la gestión y automatización de dispositivos.",
+      "App Mobile de gestión financiera.",
 
     images: ["/klp_system_web.png"],
 
     technologies: [
       {
-        name: "Python",
-        icon: SiPython,
+        name: "Flutter",
+        icon: SiFlutter,
       },
       {
         name: "SQLite",
         icon: SiSqlite,
       },
       {
-        name: "Flask",
-        icon: FaDesktop,
+        name: "CMake",
+        icon: FaBox,
       },
       {
         name: "Bootstrap",
@@ -73,7 +73,7 @@ const projects = [
       },
     ],
 
-    github: "https://github.com/K3NYEL/klp_system_web",
+    github: "https://github.com/K3NYEL/myfinc",
   },
 ];
 
