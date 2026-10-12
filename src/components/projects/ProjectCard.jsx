@@ -1,39 +1,55 @@
 import { createPortal } from "react-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isChangingImage, setIsChangingImage] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
+  const imageChangeTimeout = useRef(null);
+  const projectImages = project.images ?? (project.image ? [project.image] : []);
 
   const changeImage = (index) => {
     if (index === currentImage) return;
 
-    setIsChangingImage(true);
+    if (imageChangeTimeout.current) {
+      window.clearTimeout(imageChangeTimeout.current);
+    }
 
-    setTimeout(() => {
+    setIsChangingImage(true);
+    imageChangeTimeout.current = window.setTimeout(() => {
       setCurrentImage(index);
       setIsChangingImage(false);
+      imageChangeTimeout.current = null;
     }, 150);
   };
 
   const openCard = () => {
     setCurrentImage(0);
     setIsChangingImage(false);
+    setIsImageViewerOpen(false);
     setIsExpanded(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeCard = () => {
+    setIsImageViewerOpen(false);
     setIsExpanded(false);
-    document.body.style.overflow = "";
   };
 
   useEffect(() => {
+    if (!isExpanded) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        closeCard();
+      if (event.key !== "Escape") return;
+
+      if (isImageViewerOpen) {
+        setIsImageViewerOpen(false);
+      } else {
+        setIsImageViewerOpen(false);
+        setIsExpanded(false);
       }
     };
 
@@ -41,8 +57,14 @@ function ProjectCard({ project }) {
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
+  }, [isExpanded, isImageViewerOpen]);
+
+  useEffect(() => () => {
+    if (imageChangeTimeout.current) {
+      window.clearTimeout(imageChangeTimeout.current);
+    }
   }, []);
 
   return (
@@ -71,9 +93,12 @@ function ProjectCard({ project }) {
       >
         {/* Imagen */}
         <div className="relative h-44 shrink-0 overflow-hidden bg-gray-800">
+          {project.image ? (
           <img
             src={project.image}
-            alt={project.title}
+            alt={`Vista previa de ${project.title}`}
+            loading="lazy"
+            decoding="async"
             className="
               h-full
               w-full
@@ -83,6 +108,11 @@ function ProjectCard({ project }) {
               group-hover:scale-105
             "
           />
+          ) : (
+            <div className="flex h-full items-center justify-center px-6 text-center text-sm text-gray-400">
+              Vista previa no disponible
+            </div>
+          )}
 
           <div
             className="
@@ -193,6 +223,7 @@ function ProjectCard({ project }) {
                 "
               >
                 {/* Galería */}
+                {projectImages.length > 0 ? (
                 <div className="overflow-hidden bg-gray-950">
                   {/* Imagen */}
                   <button
@@ -232,9 +263,11 @@ function ProjectCard({ project }) {
                     "
                   >
                     <img
-                      key={project.images[currentImage]}
+                      key={projectImages[currentImage]}
                       src={project.images[currentImage]}
                       alt={`${project.title} - imagen ${currentImage + 1}`}
+                      loading="lazy"
+                      decoding="async"
                       onClick={() => setIsImageViewerOpen(true)}
                       className={`
                         h-full
@@ -254,7 +287,7 @@ function ProjectCard({ project }) {
                     />
 
                     {/* Anterior */}
-                    {project.images.length > 1 && (
+                    {projectImages.length > 1 && (
                       <button
                         type="button"
                         onClick={() =>
@@ -398,7 +431,7 @@ function ProjectCard({ project }) {
                         p-2
                       "
                     >
-                      {project.images.map((image, index) => (
+                      {projectImages.map((image, index) => (
                         <button
                           key={image}
                           type="button"
@@ -422,6 +455,8 @@ function ProjectCard({ project }) {
                           <img
                             src={image}
                             alt={`Miniatura ${index + 1}`}
+                            loading="lazy"
+                            decoding="async"
                             className="h-full w-full object-cover"
                           />
                         </button>
@@ -429,6 +464,11 @@ function ProjectCard({ project }) {
                     </div>
                   )}
                 </div>
+                ) : (
+                  <div className="flex min-h-40 items-center justify-center bg-gray-950 px-6 text-center text-sm text-gray-400">
+                    Vista previa no disponible para este proyecto.
+                  </div>
+                )}
 
                 {/* Contenido */}
                 <div className="p-5 sm:p-6">
