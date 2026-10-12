@@ -1,5 +1,5 @@
-import { SiFlutter, SiPython, SiSqlite } from "react-icons/si";
-import { FaBox, FaFilePdf, FaDesktop } from "react-icons/fa";
+import { SiDart, SiFlutter, SiPython, SiSqlite } from "react-icons/si";
+import { FaAndroid, FaBox, FaFilePdf, FaDesktop } from "react-icons/fa";
 import KlpSystemImage from "../assets/2.png";
 
 const projects = [
@@ -46,7 +46,12 @@ const projects = [
     title: "MyFinc",
 
     description:
-      "App Mobile de gestión financiera.",
+      "Aplicación de finanzas personales para administrar cuentas, movimientos y respaldos desde el dispositivo.",
+
+    expandedDescription:
+      "MyFinc es una aplicación de finanzas personales desarrollada con Flutter, pensada para organizar el dinero y mantener los datos bajo el control del usuario.\n\n" +
+      "Permite administrar cuentas y balances, registrar ingresos, gastos y transferencias, y consultar estadísticas y categorías. También incluye copias de seguridad locales que se pueden crear y restaurar.\n\n" +
+      "La aplicación utiliza SQLite como almacenamiento principal y ofrece opciones de tema claro, oscuro o según el sistema. El código fuente está disponible en GitHub.",
 
     image: null,
     images: [],
@@ -57,16 +62,16 @@ const projects = [
         icon: SiFlutter,
       },
       {
+        name: "Dart",
+        icon: SiDart,
+      },
+      {
         name: "SQLite",
         icon: SiSqlite,
       },
       {
-        name: "CMake",
-        icon: FaBox,
-      },
-      {
-        name: "Bootstrap",
-        icon: FaFilePdf,
+        name: "Android",
+        icon: FaAndroid,
       },
     ],
 
