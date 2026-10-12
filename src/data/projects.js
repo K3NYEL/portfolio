@@ -15,11 +15,7 @@ const projects = [
       "El proyecto está actualmente en desarrollo y cuenta con herramientas para ejecución desde código fuente, pruebas automatizadas y generación de ejecutables mediante PyInstaller.",
 
     image: KlpSystemImage,
-    images: [
-      "src/assets/klp_system.png",
-      "src/assets/klp_system_2.png",
-      "src/assets/klp_system_3.png",
-    ],
+    images: [KlpSystemImage],
 
     technologies: [
       {
@@ -52,7 +48,8 @@ const projects = [
     description:
       "App Mobile de gestión financiera.",
 
-    images: ["/klp_system_web.png"],
+    image: null,
+    images: [],
 
     technologies: [
       {

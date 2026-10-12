@@ -2,12 +2,15 @@ import { useState } from "react";
 
 function FormCard() {
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const form = event.currentTarget;
+    if (isSubmitting) return;
 
+    setIsSubmitting(true);
     setStatus("Enviando...");
 
     try {
@@ -25,8 +28,10 @@ function FormCard() {
       } else {
         setStatus("No se pudo enviar el mensaje.");
       }
-    } catch (error) {
+    } catch {
       setStatus("Ocurrió un error al enviar el mensaje.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -47,6 +52,7 @@ function FormCard() {
       {/* Formulario */}
       <div className="w-full flex-1">
         <form onSubmit={handleSubmit} className="space-y-2.5">
+          <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
           {/* Nombre */}
           <div>
             <label
@@ -79,6 +85,8 @@ function FormCard() {
                 focus:ring-1
                 focus:ring-red-500
               "
+              maxLength={100}
+              autoComplete="name"
               required
             />
           </div>
@@ -115,6 +123,8 @@ function FormCard() {
                 focus:ring-1
                 focus:ring-red-500
               "
+              maxLength={254}
+              autoComplete="email"
               required
             />
           </div>
@@ -152,6 +162,7 @@ function FormCard() {
                 focus:ring-1
                 focus:ring-red-500
               "
+              maxLength={5000}
               required
             />
           </div>
@@ -159,6 +170,7 @@ function FormCard() {
           {/* Botón */}
           <button
             type="submit"
+            disabled={isSubmitting}
             className="
               inline-flex
               w-full
@@ -178,12 +190,12 @@ function FormCard() {
               sm:w-auto
             "
           >
-            Enviar mensaje
+            {isSubmitting ? "Enviando..." : "Enviar mensaje"}
           </button>
 
           {/* Estado */}
           {status && (
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400" role="status" aria-live="polite">
               {status}
             </p>
           )}

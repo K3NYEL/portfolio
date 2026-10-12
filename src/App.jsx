@@ -63,7 +63,7 @@ function App() {
       <NavBar activeSection={activeSection} onNavigate={handleNavigation} />
 
       {/* Main content */}
-      <main>
+      <main id="main-content">
         {/* Home */}
         <section
           id="home"
@@ -169,7 +169,9 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-gray-500"></footer>
+      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Kenyel Alexander Restituyo Montero. Todos los derechos reservados.
+      </footer>
     </div>
   );
 }
