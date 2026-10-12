@@ -87,9 +87,6 @@ function FormCard() {
               "
               maxLength={100}
               autoComplete="name"
-              maxLength={254}
-              autoComplete="email"
-              maxLength={5000}
               required
             />
           </div>
@@ -126,6 +123,8 @@ function FormCard() {
                 focus:ring-1
                 focus:ring-red-500
               "
+              maxLength={254}
+              autoComplete="email"
               required
             />
           </div>
@@ -163,6 +162,7 @@ function FormCard() {
                 focus:ring-1
                 focus:ring-red-500
               "
+              maxLength={5000}
               required
             />
           </div>
