@@ -25,6 +25,7 @@ function NavBar({ activeSection, onNavigate }) {
           onClick={() => handleNavigation("home")}
           className="text-xl font-bold tracking-tight text-white transition hover:text-red-500"
         >
+          Kenyel
         </a>
 
         {/* Desktop menu */}
@@ -67,7 +68,7 @@ function NavBar({ activeSection, onNavigate }) {
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="rounded-lg p-2 text-gray-300 transition hover:bg-white/10 hover:text-white md:hidden"
-          aria-label="Abrir menú"
+          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? (
